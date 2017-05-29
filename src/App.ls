@@ -7,5 +7,5 @@
 
 module.exports = class App extends Component
   render: ->
-    el Layout, null, children:
+    el Layout, null, children: 
       el Counter

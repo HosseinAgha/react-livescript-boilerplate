@@ -6,5 +6,5 @@ require! {
 
 module.exports = ({ children }) ->
   div css.container, children:
-    el \h1, null, children: "Hello, world! 12234234"
+    el \h1, null, children: "Hello, world!"
     children
