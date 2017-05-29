@@ -16,8 +16,43 @@ open http://localhost:3000
 Now edit `src/App.ls`.  
 Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
 
-### stylus
+### Stylus
 loads stylus files using css modules standard
 
-### language support
+### Language support
 Hot Reloads both JSX and LiveScript files
+
+### Livescript Helper Functions  
+We provide helper functions (`div`, `input`, `span` and `el`) for livescript   
+you can require them using `$el` alias path  
+Usage:  
+
+  - first parameter can be a class array or a className string    
+    array odd elements are classNames and even elements define whether class should be added
+  ```livescript
+    div [css.container, true, css.hasBorder, hasBorder],
+      children: 
+        div null, children: \salam
+    # if hasBorder is true this roughly equals to jsx bellow
+  ```
+  ```jsx
+    <div className="container hasBorder"> 
+      <div>salam</div>
+    </div>
+  ```
+
+  - second parameter is props. 
+    you should also provide children using props:  
+  ```livescript
+    div css.container,
+      children: ...
+  ``` 
+
+  - `el` function gets a React component or a basic element string like `"div"`    
+  ```livescript
+    el \div, [css.container, true, css.hasBorder, hasBorder],
+      children: ...
+    el Button, [css.container, true, css.hasBorder, hasBorder],
+      children: ...
+      onClick: ...
+  ``` 
