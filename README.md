@@ -13,6 +13,8 @@ npm start
 open http://localhost:3000
 ```
 
+To use the project clone it and remove the `.git` directory then have fun
+
 Now edit `src/App.ls`.  
 Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
 
