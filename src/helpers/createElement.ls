@@ -5,9 +5,9 @@ require! {
 el = (element, classNames, props) ->
 
   if classNames
-    props.className = props.className or ""
+    propClassName = props.className or ""
     classNamesString = generateClassString(classNames) or ""
-    props.className = "#{props.classNames} #{classNamesString}" 
+    props.className = "#{propClassName} #{classNamesString}" 
 
   createElement element, props
 
