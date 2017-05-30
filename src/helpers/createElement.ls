@@ -16,7 +16,8 @@ function generateClassString(classNames)
   classString = ""
   for name, index in classNames
     if ((index % 2) is 1) and name
-      classString += "#{classNames[index - 1]} "
+      classString += "#{classNames[index - 1] or ""} "
+  classString
 
 module.exports = 
   el: el
