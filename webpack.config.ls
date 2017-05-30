@@ -30,10 +30,10 @@ module.exports =
     publicPath: '/static/'
     # necessary for HMR to know where to load the hot update chunks
   
-
   resolve: 
     alias: 
       '$el': path.resolve __dirname, 'src/helpers/createElement.ls'
+      '$assets': path.resolve __dirname, 'assets'
     
     extensions: ['.ls' '.js' '.jsx']
   
@@ -50,7 +50,7 @@ module.exports =
           'react-hot-loader/webpack'
           'livescript-loader'
         exclude: /node_modules/
-
+      
       * test: /\.styl$/
         loaders:
           * loader: 'style-loader'
@@ -60,6 +60,16 @@ module.exports =
               sourceMap: true
               localIdentName: '[name]_[local]_[hash:base64:3]'
           * loader: 'stylus-loader'
+        exclude: /node_modules/
+
+      * test: /\.(png|jpeg)$/
+        loaders: ['url-loader?limit=10000']
+        exclude: /node_modules/
+
+      * test: /\.svg$/
+        loaders: 
+          'babel-loader'
+          'react-svg-loader'
         exclude: /node_modules/
 
   plugins:

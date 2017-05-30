@@ -50,7 +50,7 @@ Usage:
       children: ...
   ``` 
 
-  - `el` function gets a React component or a basic element string like `"div"`    
+  - `el` function gets a React component or a basic element string like `"div"` as first argument, others are the same    
   ```livescript
     el \div, [css.container, true, css.hasBorder, hasBorder],
       children: ...
@@ -58,5 +58,7 @@ Usage:
       children: ...
       onClick: ...
   ``` 
+  - `elem` is an alias for createElement
+  - use `svg` here to render svg files (abstracts ES6 syntax of react-svg loader)
 
 Based on [react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate/graphs/contributors)

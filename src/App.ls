@@ -1,11 +1,11 @@
  require! {
   'react': { Component }:React
-  '$el': { el }
+  '$el': { elem }
   './Layout.ls'
   './Counter.ls'
  } 
 
 module.exports = class App extends Component
   render: ->
-    el Layout, null, children: 
-      el Counter
+    elem Layout, children: 
+      elem Counter
