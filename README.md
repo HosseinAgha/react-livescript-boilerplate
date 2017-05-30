@@ -59,6 +59,6 @@ Usage:
       onClick: ...
   ``` 
   - `elem` is an alias for `React.createElement`
-  - use `svg` here to render svg files (abstracts ES6 syntax of react-svg loader)
+  - be sure to use `svg` function to render svg files (abstracts ES6 syntax of react-svg loader)
 
 Based on [react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate/graphs/contributors)
