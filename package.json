@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "Boilerplate for ReactJS project with hot code reloading",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --progress",
     "lint": "eslint src",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.production.js",

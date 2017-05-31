@@ -79,9 +79,6 @@ module.exports =
     new webpack.NamedModulesPlugin
     # prints more readable module names in the browser console on HMR updates
 
-    new CaseSensitivePathsPlugin
-    # throws error when we write file name case wrong
-
     new WatchMissingNodeModulesPlugin
     # Don't need to rerun webpack on npm install
 
