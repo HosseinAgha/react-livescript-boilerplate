@@ -1,6 +1,6 @@
 {
   "name": "react-hot-boilerplate",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Boilerplate for ReactJS project with hot code reloading",
   "scripts": {
     "start": "webpack-dev-server --progress",
