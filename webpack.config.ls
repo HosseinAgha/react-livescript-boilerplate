@@ -37,7 +37,7 @@ module.exports =
     
     extensions: ['.ls' '.js' '.jsx']
   
-  devtool: 'inline-source-map'
+  devtool: 'cheap-module-eval-source-map'
 
   module: 
     rules:
@@ -48,7 +48,7 @@ module.exports =
       * test: /\.ls$/
         loaders:
           'react-hot-loader/webpack'
-          'livescript-loader'
+          'livescript-loader?map=embedded'
         exclude: /node_modules/
       
       * test: /\.styl$/
