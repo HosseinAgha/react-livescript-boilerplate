@@ -1,7 +1,8 @@
+// let React = require('react');
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../App.ls';
+import App from '../App.js';
 
 /*
   We use JSX here to only demonstrate that we support it ;)
@@ -16,6 +17,12 @@ const render = Component =>
     rootEl
   );
 
+// ReactDOM.render(<App />, rootEl);
+
+// function render(Component) {
+//   ReactDOM.render(<AppContainer><Component /></AppContainer>, rootEl);  
+// }
+
 render(App);
 
-if (module.hot) module.hot.accept('../App.ls', () => render(App));
+if (module.hot) module.hot.accept('../App.js', () => render(App));
