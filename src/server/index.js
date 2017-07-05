@@ -53,7 +53,6 @@ function isUserDone(username) {
 }
 
 function toggleUser(isDone, userInfo) {
-  console.log(isDone);
   if(isDone) {
     users.done = users.done.filter( (user) => {
       return user.id !== userInfo.id

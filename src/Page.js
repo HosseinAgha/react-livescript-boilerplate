@@ -24,7 +24,6 @@ export default class Page extends Component {
     this.socket = io('http://localhost:3001');
     this.socket.on('userStatus', (userInfos) => {
       let { yourUser, users } = userInfos;
-      console.log(yourUser, users);
       if (yourUser != null) {
           this.setState({
             myUser: yourUser
