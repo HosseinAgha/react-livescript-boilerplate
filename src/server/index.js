@@ -1,7 +1,10 @@
+"use strict"
+
 let express = require('express')
 let app = express();
 let http = require('http').Server(app);
 let io = require('socket.io')(http);
+let fileReadWrite = require('fileReadWrite');
 
 let count = 0;
 let users = {
@@ -26,7 +29,7 @@ io.on('connection', (socket) => {
     
     users.unDone = users.unDone.concat(newUser)
 
-    response = {
+    let response = {
       users: users,
       yourUser: newUser
     }

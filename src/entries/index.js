@@ -1,5 +1,7 @@
 // let React = require('react');
 import { AppContainer } from 'react-hot-loader';
+// const HotLoader = require('react-hot-loader');
+// let AppContainer = HotLoader.AppContainer;
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../App.js';
